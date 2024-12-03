@@ -1,7 +1,4 @@
-rows = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-columns = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-for row in rows:
-    for column in columns:
+for row in range(1, 10):
+    for column in range(1, 10):
         print(row * column, end=" ")
     print()
