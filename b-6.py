@@ -8,10 +8,9 @@ def dice(Face):
     return random.randint(1, Face)
 
 
-x = 0
 result = []
 
-while x <= times - 1:
+for x in range(0, times):
     result.append(dice(faces))
     x += 1
 print(result)
