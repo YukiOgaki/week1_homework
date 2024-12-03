@@ -10,7 +10,6 @@ def dice(Face):
 
 result = []
 
-for x in range(0, times):
+for x in range(times):
     result.append(dice(faces))
-    x += 1
 print(result)
