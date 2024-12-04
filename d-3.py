@@ -3,18 +3,18 @@ import math
 
 class Square:
     # コードが期待通り動作するように実装
-    def __init__(self, side):
+    def __init__(self, side: float):
         self.side = side
 
     def area(self):
-        area_rectangle = float(self.side) ** 2
+        area_rectangle = self.side**2
         if area_rectangle == int(area_rectangle):
             return int(area_rectangle)
         else:
             return f"{area_rectangle:.2f}"
 
     def diagonal(self):
-        diagonal_rectangle = float(self.side) * math.sqrt(2)
+        diagonal_rectangle = self.side * math.sqrt(2)
         return f"{diagonal_rectangle:.2f}"
 
 
