@@ -1,5 +1,6 @@
 import math
 
+
 class Rectangle:
     # コードが期待通り動作するように実装
     def __init__(self, height, width):
@@ -9,10 +10,11 @@ class Rectangle:
     def area(self):
         area_rectangle = float(self.height) * float(self.width)
         return f"{area_rectangle:.2f}"
-    
+
     def diagonal(self):
         diagonal_rectangle = math.sqrt(float(self.height) ** 2 + float(self.width) ** 2)
         return f"{diagonal_rectangle:.2f}"
+
 
 rectangle1 = Rectangle(height=5, width=6)
 print(rectangle1.area())  # 30.00
