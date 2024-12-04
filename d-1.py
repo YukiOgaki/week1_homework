@@ -3,15 +3,15 @@ import math
 
 class Circle:
     # コードが期待通り動作するように実装
-    def __init__(self, radius):
+    def __init__(self, radius: int):
         self.radius = radius
 
     def area(self):
-        area_circle = int(self.radius) ** 2 * math.pi
+        area_circle = self.radius**2 * math.pi
         return round(area_circle, 2)
 
     def perimeter(self):
-        perimeter_circle = int(self.radius) * 2 * math.pi
+        perimeter_circle = self.radius * 2 * math.pi
         return round(perimeter_circle, 2)
 
 
