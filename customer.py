@@ -10,21 +10,15 @@ class Customer:
 
     def entry_fee(self):
         # C-6. 75歳以上の料金区分の追加
-        Infant = 0 <= self.age <= 3
-        Child = 3 < self.age < 20
-        Adult = 20 <= self.age < 65
-        Senior = 65 <= self.age < 75
-        Elderly = 75 <= self.age
-
-        if Infant:
+        if 0 <= self.age <= 3:
             return f"{0}"
-        elif Child:
+        elif 3 < self.age < 20:
             return f"{1000}"
-        elif Adult:
+        elif 20 <= self.age < 65:
             return f"{1500}"
-        elif Senior:
+        elif 65 <= self.age < 75:
             return f"{1200}"
-        elif Elderly:
+        elif 75 <= self.age:
             return f"{500}"
         else:
             return "0以上を入力してください"
@@ -33,14 +27,7 @@ class Customer:
         return f"{self.full_name()},{self.age},{self.entry_fee()}"
 
     def info_align(self):
-        fullname = self.full_name()
-        age_ = str(self.age)
-
-        while len(fullname) < 16:
-            fullname += " "
-            while len(age_) < 8:
-                age_ += " "
-        return f"{fullname}{age_}{self.entry_fee()}"
+        return f"{self.full_name()}\t{self.age}\t{self.entry_fee()}"
 
     def info_grid(self):
         return f"{self.full_name()}|{self.age}|{self.entry_fee()}"
